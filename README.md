@@ -1,6 +1,6 @@
 # docker-ubuntu16-blobfuse
 
-Docker container based on ubuntu:16.04 which mounts an Azure blob
+Docker image based on ubuntu:16.04 which mounts an Azure blob
 container via [Microsoft's FUSE
 driver](https://github.com/Azure/azure-storage-fuse).
 
@@ -29,10 +29,10 @@ remind you "exactly one of the environment variables
 
 
 As documented in the `Makefile`, there are (at least) three different
-ways to handle the environment variables:
+ways to handle these environment variables:
 
 * If the calling shell already has the proper environment variables set,
-simply naming them via the `-e` flag to `docker run` will include their
+simply naming them via the `-e` flag to `docker run` will safely pass in their
 values automatically:
 ```
 ENV = \
